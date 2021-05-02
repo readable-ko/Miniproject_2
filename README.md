@@ -13,6 +13,6 @@
  * Visual Studio Code
  
 ## Who are we
- 1. 고영광(readable-ko)
- 2. 김태현(drone8449)
+ 1. 고영광([readable-ko](https://github.com/readable-ko))
+ 2. 김태현([drone8449](https://github.com/drone8449))
 
