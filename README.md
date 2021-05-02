@@ -1,6 +1,6 @@
 ![](https://user-images.githubusercontent.com/37644225/116804440-ca55ed00-ab59-11eb-81d2-871317513b8a.jpg)
 
-잃어버린 반려동물 함께 찾아보아요!
+#####잃어버린 반려동물 함께 찾아보아요!
 > 서비스 개요 및 기획 의도     
 > 참조 (https://github.com/readable-ko/Miniproject_2/wiki)
 ***
