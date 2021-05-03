@@ -1,3 +1,5 @@
+//This is the main code file of the animal finding system
+//changed in 2021-05-03
 #include <stdio.h>
 #include <string.h>
 #include "crudfuction.h"
@@ -32,7 +34,7 @@ int main() {
     else if(menu == 4) {
       int num = selectNumber(alist, index);
       if(num > 0) {
-        printf("Á¤¸»·Î »èÁ¦ÇÏ½Ã°Ú½À´Ï±î?(»èÁ¦ 1¹ø) :");
+        printf("ì •ë§ë¡œ ì‚­ì œí•˜ì‹œê² ìŠµë‹ˆê¹Œ?(ì‚­ì œ 1ë²ˆ) :");
         scanf("%d",&delok);
         if(delok == 1) {
           deleteAnimal(&alist[num-1]);
@@ -46,10 +48,10 @@ int main() {
     }
 
     else if(menu == 6) {
-      printf("\n1. ÀÌ¸§À¸·Î °Ë»ö\n");
-      printf("2. Ç°Á¾À¸·Î °Ë»ö\n");
-      printf("3. ³ªÀÌ·Î °Ë»ö\n");
-      printf("¼ıÀÚ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä : ");
+      printf("\n1. ì´ë¦„ìœ¼ë¡œ ê²€ìƒ‰\n");
+      printf("2. í’ˆì¢…ìœ¼ë¡œ ê²€ìƒ‰\n");
+      printf("3. ë‚˜ì´ë¡œ ê²€ìƒ‰\n");
+      printf("ìˆ«ìë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš” : ");
       scanf("%d", &delok); /*
       switch(delok) {
         case 1: searchName(alist, count); break;
@@ -60,6 +62,6 @@ int main() {
 
     }
   }
-  printf("ÇÁ·Î±×·¥ÀÌ Á¾·áµÇ¾ú½À´Ï´Ù.\n");
+  printf("í”„ë¡œê·¸ë¨ì´ ì¢…ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.\n");
   return 0;
 }
