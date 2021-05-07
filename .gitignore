@@ -1,2 +1,8 @@
+# Object files
 *.o
+*.obj
+*.ko
+
+# exe files
 *.exe
+*.out
