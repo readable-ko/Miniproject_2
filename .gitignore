@@ -3,6 +3,6 @@
 *.obj
 *.ko
 
-# exe files
+# Exe files
 *.exe
 *.out
