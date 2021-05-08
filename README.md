@@ -10,7 +10,7 @@
 
 ## 개발 환경 및 언어
  * C Language
- * Visual Studio Code
+ * VSCode
  
 ## Who are we
  1. 고영광([readable-ko](https://github.com/readable-ko))
