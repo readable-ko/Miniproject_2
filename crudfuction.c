@@ -61,7 +61,7 @@ int updateAnimal(Animal *a) {
   
   while(1) {
     printf("실종 동물의 성별을 입력해주세요");
-    printf("(남자의 경우 m, 여자의 경우 w를 입력해주세요.): ");
+    printf("(남자의 경우 m, 여자의 경우 w, 자웅 동체의 경우 n을 입력해주세요.): ");
     scanf("%c", &a->sex);
     if(a->sex == 'm' || a->sex == 'w' || a->sex == 'M' || a->sex == 'W' || a->sex == 'n' || a->sex == 'N') break;
     else {
