@@ -19,9 +19,11 @@ int main() {
     menu = selectMenu();
     if(menu == 0) break;
     if(menu == 2 || menu == 3 || menu == 4) {
-      printf("-> 입력된 데이터가 없습니다!\n");
+      if(count == 0) {
+	      printf("-> 입력된 데이터가 없습니다!\n");
+	      continue;
+      }
     }
-        if(count == 0) continue;
 
     if(menu == 1) count += createAnimal(&alist[index++]);
     
