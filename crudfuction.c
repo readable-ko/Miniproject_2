@@ -5,38 +5,39 @@
 
 int selectMenu() {
   int menu;
-  printf("\n ë°˜ë ¤ë™ë¬¼ ì°¾ê¸° í”„ë¡œê·¸ë¨ì…ë‹ˆë‹¤. \n");
-  printf("1. ì‹¤ì¢… ë™ë¬¼ ë“±ë¡\n");
-  printf("2. ì‹¤ì¢… ë™ë¬¼ ì¡°íšŒ\n");
-  printf("3. ì‹¤ì¢… ë™ë¬¼ ìˆ˜ì •\n");
-  printf("4. ì‹¤ì¢… ë™ë¬¼ ì‚­ì œ\n");
-  printf("5. ì‹¤ì¢… ëª…ë‹¨ ì €ì¥\n");
-  printf("6. ê²€ìƒ‰\n");
-  printf("0. ì¢…ë£Œ\n");
-  printf("ì›í•˜ì‹œëŠ” ë©”ë‰´ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”. : ");
+  printf("\n ¹İ·Áµ¿¹° Ã£±â ÇÁ·Î±×·¥ÀÔ´Ï´Ù. \n");
+  printf("1. ½ÇÁ¾ µ¿¹° µî·Ï\n");
+  printf("2. ½ÇÁ¾ µ¿¹° Á¶È¸\n");
+  printf("3. ½ÇÁ¾ µ¿¹° ¼öÁ¤\n");
+  printf("4. ½ÇÁ¾ µ¿¹° »èÁ¦\n");
+  printf("5. ½ÇÁ¾ ¸í´Ü ÀúÀå\n");
+  printf("6. °Ë»ö\n");
+  printf("0. Á¾·á\n");
+  printf("¿øÇÏ½Ã´Â ¸Ş´º¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä. : ");
   scanf("%d",&menu);
   return menu;
 }
 
 int createAnimal(Animal *a) {
-  printf("ì‹¤ì¢… ë™ë¬¼ì˜ ì´ë¦„ì„ ì…ë ¥í•´ì£¼ì„¸ìš”: ");
+  printf("½ÇÁ¾ µ¿¹°ÀÇ ÀÌ¸§À» ÀÔ·ÂÇØÁÖ¼¼¿ä: ");
   scanf("%s", a->name);
-  printf("ì‹¤ì¢… ë™ë¬¼ì˜ ë‚˜ì´ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”: ");
+  printf("½ÇÁ¾ µ¿¹°ÀÇ ³ªÀÌ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä: ");
   scanf("%d", &a->age);
-  printf("ì‹¤ì¢… ë™ë¬¼ì˜ í’ˆì¢…ì„ ì…ë ¥í•´ì£¼ì„¸ìš”: ");
+  printf("½ÇÁ¾ µ¿¹°ÀÇ Ç°Á¾À» ÀÔ·ÂÇØÁÖ¼¼¿ä: ");
   scanf("%s", a->breed);
   
   while(1) {
-    printf("ì‹¤ì¢… ë™ë¬¼ì˜ ì„±ë³„ì„ ì…ë ¥í•´ì£¼ì„¸ìš”");
-    printf("(ìˆ˜ì»·ì˜ ê²½ìš° m, ì•”ì»·ì˜ ê²½ìš° wë¥¼ ìì›… ë™ì²´ì˜ ê²½ìš° nì„ ì…ë ¥í•´ì£¼ì„¸ìš”.): ");
+    fflush(stdin);
+    printf("½ÇÁ¾ µ¿¹°ÀÇ ¼ºº°À» ÀÔ·ÂÇØÁÖ¼¼¿ä");
+    printf("(¼öÄÆÀÇ °æ¿ì m, ¾ÏÄÆÀÇ °æ¿ì w¸¦ ÀÚ¿õ µ¿Ã¼ÀÇ °æ¿ì nÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä.): ");
     scanf("%c", &a->sex);
     if(a->sex == 'm' || a->sex == 'w' || a->sex == 'M' || a->sex == 'W' || a->sex == 'n' || a->sex == 'N') break;
     else {
-      printf("w í˜¹ì€ m, nìœ¼ë¡œë§Œ ì…ë ¥í•´ì£¼ì„¸ìš”.");
+      printf("w È¤Àº m, nÀ¸·Î¸¸ ÀÔ·ÂÇØÁÖ¼¼¿ä.\n");
     }
   }
   
-  printf("ì‹¤ì¢… ë™ë¬¼ì„ ì°¾ì„ ê²½ìš° ì‚¬ë¡€ê¸ˆì„ ì…ë ¥í•´ì£¼ì„¸ìš”: ");
+  printf("½ÇÁ¾ µ¿¹°À» Ã£À» °æ¿ì »ç·Ê±İÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä: ");
   scanf("%d", &a->gratuity);
 
   return 1;
@@ -44,35 +45,36 @@ int createAnimal(Animal *a) {
 
 void readAnimal(Animal a) {
   if(a.age == -1 && a.gratuity == -1 && a.sex == 'K')
-    printf("í˜„ì¬ ì…ë ¥ëœ ë™ë¬¼ì´ ì—†ìŠµë‹ˆë‹¤.\n");
+    printf("ÇöÀç ÀÔ·ÂµÈ µ¿¹°ÀÌ ¾ø½À´Ï´Ù.\n");
   else {
-    printf("/\t%s\t/\t%d\t/\t%s\t/\t%c\t/\t%d\t/",
+    printf("/\t%s\t/\t%d\t/\t%s\t/\t%c\t/\t%d\t/\n",
     a.name, a.age, a.breed, a.sex, a.gratuity);
   }
 }
 
 int updateAnimal(Animal *a) {
-  printf("ì‹¤ì¢… ë™ë¬¼ì˜ ì´ë¦„ì„ ì…ë ¥í•´ì£¼ì„¸ìš”: ");
+  printf("½ÇÁ¾ µ¿¹°ÀÇ ÀÌ¸§À» ÀÔ·ÂÇØÁÖ¼¼¿ä: ");
   scanf("%s", a->name);
-  printf("ì‹¤ì¢… ë™ë¬¼ì˜ ë‚˜ì´ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”: ");
+  printf("½ÇÁ¾ µ¿¹°ÀÇ ³ªÀÌ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä: ");
   scanf("%d", &a->age);
-  printf("ì‹¤ì¢… ë™ë¬¼ì˜ í’ˆì¢…ì„ ì…ë ¥í•´ì£¼ì„¸ìš”: ");
+  printf("½ÇÁ¾ µ¿¹°ÀÇ Ç°Á¾À» ÀÔ·ÂÇØÁÖ¼¼¿ä: ");
   scanf("%s", a->breed);
   
   while(1) {
-    printf("ì‹¤ì¢… ë™ë¬¼ì˜ ì„±ë³„ì„ ì…ë ¥í•´ì£¼ì„¸ìš”");
-    printf("(ë‚¨ìì˜ ê²½ìš° m, ì—¬ìì˜ ê²½ìš° w, ìì›… ë™ì²´ì˜ ê²½ìš° nì„ ì…ë ¥í•´ì£¼ì„¸ìš”.): ");
+    fflush(stdin);
+    printf("½ÇÁ¾ µ¿¹°ÀÇ ¼ºº°À» ÀÔ·ÂÇØÁÖ¼¼¿ä");
+    printf("(³²ÀÚÀÇ °æ¿ì m, ¿©ÀÚÀÇ °æ¿ì w, ÀÚ¿õ µ¿Ã¼ÀÇ °æ¿ì nÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä.): ");
     scanf("%c", &a->sex);
     if(a->sex == 'm' || a->sex == 'w' || a->sex == 'M' || a->sex == 'W' || a->sex == 'n' || a->sex == 'N') break;
     else {
-      printf("w í˜¹ì€ m, nìœ¼ë¡œë§Œ ì…ë ¥í•´ì£¼ì„¸ìš”.");
+      printf("w È¤Àº m, nÀ¸·Î¸¸ ÀÔ·ÂÇØÁÖ¼¼¿ä.\n");
     }
   }
   
-  printf("ì‹¤ì¢… ë™ë¬¼ì„ ì°¾ì„ ê²½ìš° ì‚¬ë¡€ê¸ˆì„ ì…ë ¥í•´ì£¼ì„¸ìš”: ");
+  printf("½ÇÁ¾ µ¿¹°À» Ã£À» °æ¿ì »ç·Ê±İÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä: ");
   scanf("%d", &a->gratuity);
 
-  printf("->ìˆ˜ì •ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤! \n");
+  printf("->¼öÁ¤ÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù! \n");
   return 1;
 }
 
@@ -80,15 +82,15 @@ int deleteAnimal(Animal *a) {
   a->age = -1;
   a->gratuity = -1;
   a->sex = 'K';
-  printf("ë°ì´í„°ê°€ ì‚­ì œë˜ì—ˆìŠµë‹ˆë‹¤! \n");
+  printf("µ¥ÀÌÅÍ°¡ »èÁ¦µÇ¾ú½À´Ï´Ù! \n");
   return 1;
 }
 
 void listAnimal(Animal *alist, int count) {
-  printf("ë²ˆí˜¸/\tì´ë¦„\t/\të‚˜ì´\t/\tí’ˆì¢…\t/\tì„±ë³„\t/\tì‚¬ë¡€ê¸ˆ\t/\n");
+  printf("¹øÈ£/\tÀÌ¸§\t/\t³ªÀÌ\t/\tÇ°Á¾\t/\t¼ºº°\t/\t»ç·Ê±İ\t/\n");
   for(int i = 0; i < count; ++i) {
     if(alist[i].age == -1 && alist[i].gratuity == -1 && alist[i].sex == 'K') continue;
-    printf("%2d", i+1);
+    printf("%2d ", i+1);
     readAnimal(alist[i]);
   }
 }
@@ -96,7 +98,7 @@ void listAnimal(Animal *alist, int count) {
 int selectNumber(Animal *alist, int count) {
   int num;
   listAnimal(alist, count);
-  printf("ë¬´ì—‡ì„ ì„ íƒí•˜ì‹œê² ìŠµë‹ˆê¹Œ? :");
+  printf("¹«¾ùÀ» ¼±ÅÃÇÏ½Ã°Ú½À´Ï±î? :");
   scanf("%d", &num);
   return num;
 }
