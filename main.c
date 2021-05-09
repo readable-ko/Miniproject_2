@@ -15,11 +15,12 @@ int main() {
 
   //count = loadData(alist);
   index = count;
-
   while(1) {
     menu = selectMenu();
     if(menu == 0) break;
-    if(menu == 2 || menu == 3 || menu == 4)
+    if(menu == 2 || menu == 3 || menu == 4) {
+      printf("-> ÀÔ·ÂµÈ µ¥ÀÌÅÍ°¡ ¾ø½À´Ï´Ù!\n");
+    }
         if(count == 0) continue;
 
     if(menu == 1) count += createAnimal(&alist[index++]);
@@ -34,7 +35,7 @@ int main() {
     else if(menu == 4) {
       int num = selectNumber(alist, index);
       if(num > 0) {
-        printf("ì •ë§ë¡œ ì‚­ì œí•˜ì‹œê² ìŠµë‹ˆê¹Œ?(ì‚­ì œ 1ë²ˆ) :");
+        printf("Á¤¸»·Î »èÁ¦ÇÏ½Ã°Ú½À´Ï±î?(»èÁ¦ 1¹ø) :");
         scanf("%d",&delok);
         if(delok == 1) {
           deleteAnimal(&alist[num-1]);
@@ -48,10 +49,10 @@ int main() {
     }
 
     else if(menu == 6) {
-      printf("\n1. ì´ë¦„ìœ¼ë¡œ ê²€ìƒ‰\n");
-      printf("2. í’ˆì¢…ìœ¼ë¡œ ê²€ìƒ‰\n");
-      printf("3. ë‚˜ì´ë¡œ ê²€ìƒ‰\n");
-      printf("ìˆ«ìë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš” : ");
+      printf("\n1. ÀÌ¸§À¸·Î °Ë»ö\n");
+      printf("2. Ç°Á¾À¸·Î °Ë»ö\n");
+      printf("3. ³ªÀÌ·Î °Ë»ö\n");
+      printf("¼ıÀÚ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä : ");
       scanf("%d", &delok); /*
       switch(delok) {
         case 1: searchName(alist, count); break;
@@ -62,6 +63,6 @@ int main() {
 
     }
   }
-  printf("í”„ë¡œê·¸ë¨ì´ ì¢…ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.\n");
+  printf("ÇÁ·Î±×·¥ÀÌ Á¾·áµÇ¾ú½À´Ï´Ù.\n");
   return 0;
 }
