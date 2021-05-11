@@ -1,4 +1,4 @@
-//This is the CRUD fuction code file of the animal finding system
+//This is the CRUD function code file of the animal finding system
 // utf8 file
 #include <stdio.h>
 #include <string.h>
