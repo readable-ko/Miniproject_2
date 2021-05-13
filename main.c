@@ -1,5 +1,5 @@
 //This is the main code file of the animal finding system
-//changed in 2021-05-09 this file is utf-8 file
+//changed in 2021-05-13 this file is utf-8 file
 #include <stdio.h>
 #include <string.h>
 #include "crudfuction.h"
@@ -51,9 +51,9 @@ int main() {
     }
 
     else if(menu == 6) {
-      printf("\n1. 이름으로 검색\n");
-      printf("2. 품종으로 검색\n");
-      printf("3. 나이로 검색\n");
+      printf("\n1. 이름으로 검색 \n");
+      printf("2. 품종으로 검색 \n");
+      printf("3. 나이로 검색 \n");
       printf("숫자를 입력해주세요 : ");
       scanf("%d", &delok); /*
       switch(delok) {
