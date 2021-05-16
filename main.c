@@ -13,7 +13,7 @@ int main() {
   int count = 0,index =0, menu;
   int delok;
 
-  //count = loadData(alist);
+  count = loadData(alist);
   index = count;
   while(1) {
     menu = selectMenu();
@@ -47,7 +47,7 @@ int main() {
     }
 
     else if(menu == 5) {
-      //saveData(alist,index);
+      saveData(alist,index);
     }
 
     else if(menu == 6) {
