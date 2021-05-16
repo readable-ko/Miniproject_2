@@ -1,11 +1,8 @@
 CC = gcc
-TARGET = shop
-DTARGET = shop_debug
-OBJECTS = main.c product.o manager.o
+TARGET = animal
+OBJECTS = main.c crud.o manager.o
 all : $(TARGET)
 $(TARGET): $(OBJECTS)
-	$(CC) -o $@ $^
-$(DTARGET): $(OBJECTS)
-	$(CC) -DDEBUG -o $@ $^
+        $(CC) -o $@ $^
 clean:
-	rm *.o shop
+        rm *.o animal
