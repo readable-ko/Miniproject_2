@@ -55,13 +55,13 @@ int main() {
       printf("2. 품종으로 검색 \n");
       printf("3. 나이로 검색 \n");
       printf("숫자를 입력해주세요 : ");
-      scanf("%d", &delok); /*
+      scanf("%d", &delok); 
       switch(delok) {
         case 1: searchName(alist, count); break;
         case 2: searchType(alist, count); break;
-        case 3: serachAge(alist, count); break;
+        case 3: searchAge(alist, count); break;
         default: break;
-      } */
+      } 
 
     }
   }
