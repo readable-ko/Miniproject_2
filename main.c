@@ -13,7 +13,7 @@ int main() {
   int count = 0,index =0, menu;
   int delok;
 
-  //count = loadData(alist);
+  count = loadData(alist);
   index = count;
   while(1) {
     menu = selectMenu();
@@ -47,7 +47,7 @@ int main() {
     }
 
     else if(menu == 5) {
-      //saveData(alist,index);
+      saveData(alist,index);
     }
 
     else if(menu == 6) {
@@ -55,13 +55,13 @@ int main() {
       printf("2. 품종으로 검색 \n");
       printf("3. 나이로 검색 \n");
       printf("숫자를 입력해주세요 : ");
-      scanf("%d", &delok); /*
+      scanf("%d", &delok); 
       switch(delok) {
         case 1: searchName(alist, count); break;
         case 2: searchType(alist, count); break;
-        case 3: serachAge(alist, count); break;
+        case 3: searchAge(alist, count); break;
         default: break;
-      } */
+      } 
 
     }
   }
