@@ -36,3 +36,63 @@ void saveData(Animal s[], int count){
         printf("=> 저장됨!");
 }
 
+void searchName(Animal *s, int count){
+        int scnt = 0;
+        char search[20];
+
+        printf("검색할 이름? ");
+        scanf("%s", search);
+
+        printf("번호/\t이름\t/\t나이\t/\t품종\t/\t성별\t/\t사례금\t/\n");
+        for(int i = 0; i < count; i++){
+                if(s[i].age == -1) continue;
+                if(strstr(s[i].name, search)){
+                        printf("%2d ", i+1);
+                        readAnimal(s[i]);
+                        scnt++;
+                }
+        }
+        if(scnt == 0) printf("=> 검색된 데이터 없음!");
+        printf("\n");
+}
+
+void searchType(Animal *s, int count){
+        int scnt = 0;
+        char search[20];
+
+        printf("검색할 품종? ");
+        scanf("%s", search);
+
+        printf("번호/\t이름\t/\t나이\t/\t품종\t/\t성별\t/\t사례금\t/\n");
+        for(int i = 0; i < count; i++){
+                if(s[i].age == -1) continue;
+                if(strstr(s[i].breed, search)){
+                        printf("%2d ", i+1);
+                        readAnimal(s[i]);
+                        scnt++;
+                }
+        }
+        if(scnt == 0) printf("=> 검색된 데이터 없음!");
+        printf("\n");
+}
+
+void searchAge(Animal *s, int count){
+        int scnt = 0;
+        int search = 0;
+
+        printf("검색할 나이? ");
+        scanf("%d", &search);
+
+        printf("번호/\t이름\t/\t나이\t/\t품종\t/\t성별\t/\t사례금\t/\n");
+        for(int i = 0; i < count; i++){
+                if(s[i].age == -1) continue;
+                if(s[i].age == search){
+                        printf("%2d ", i+1);
+                        readAnimal(s[i]);
+                        scnt++;
+                }
+        }
+        if(scnt == 0) printf("=> 검색된 데이터 없음!");
+        printf("\n");
+}
+
