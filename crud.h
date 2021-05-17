@@ -1,6 +1,6 @@
 //This is the header file of the crud fuction.
-#ifndef __CRUDFUNCTION_H__
-#define __CRUDFUNCTION_H__
+#ifndef __CRUD_H__
+#define __CRUD_H__
 
 typedef struct {
  char name[50];
