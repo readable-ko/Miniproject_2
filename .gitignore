@@ -4,5 +4,6 @@
 *.ko
 
 # Exe files
+animal
 *.exe
 *.out
