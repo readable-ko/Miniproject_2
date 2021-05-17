@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "crud.h"
+#include "manager.h"
 
 int main() {
   Animal alist[100];
